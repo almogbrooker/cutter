@@ -226,6 +226,7 @@ public:
     void startEmulation();
     void attachDebug(int pid);
     void stopDebug();
+    void syncAndSeekProgramCounter();
     void continueDebug();
     void continueUntilCall();
     void continueUntilSyscall();
