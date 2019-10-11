@@ -231,6 +231,8 @@ void DisassemblyContextMenu::addSetToDataMenu()
     setToDataMenu = setAsMenu->addMenu(tr("Data..."));
 
     initAction(&actionSetToDataByte, tr("Byte"));
+    actionSetToDataByte.setShortcut(getSetAsByteSequence());
+    actionSetToDataByte.setShortcutContext(Qt::WidgetWithChildrenShortcut);
     setToDataMenu->addAction(&actionSetToDataByte);
     connect(&actionSetToDataByte, &QAction::triggered, this, [this] { setToData(1); });
 
@@ -520,6 +522,10 @@ QKeySequence DisassemblyContextMenu::getSetAsStringSequence() const
     return {Qt::Key_A};
 }
 
+QKeySequence DisassemblyContextMenu::getSetAsByteSequence() const
+{
+    return {Qt::Key_B};
+}
 
 QKeySequence DisassemblyContextMenu::getSetToDataSequence() const
 {

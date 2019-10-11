@@ -94,6 +94,7 @@ private:
     QKeySequence getUndefineFunctionSequence() const;
     QKeySequence getEditFunctionSequence() const;
     QList<QKeySequence> getAddBPSequence() const;
+    QKeySequence getSetAsByteSequence() const;
 
     /**
      * @return the shortcut key for "Link Type to Address" option
